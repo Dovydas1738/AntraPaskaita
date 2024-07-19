@@ -84,6 +84,48 @@ namespace ManoPrograma
             //Console.WriteLine();
             //Console.WriteLine(ArDidzioji(simbolis));
 
+            // 8 uzduotis**********************************************************
+
+            //Console.WriteLine("Iveskite kvadrato krastines ilgi");
+
+            //float kvadKrast = float.Parse(Console.ReadLine());
+
+            //Console.WriteLine("Kvadrato perimetras yra: " + KvadratoPerimetras(kvadKrast));
+
+            // 9 uzduotis**********************************************************
+
+            //Console.WriteLine("Iveskite trikampio pagrindo ilgi");
+            //float trikPag = float.Parse(Console.ReadLine());
+
+            //Console.WriteLine("Iveskite trikampio auksti");
+            //float trikAukstis = float.Parse(Console.ReadLine());
+
+            //Console.WriteLine("Trikampio plotas yra: " + TrikampioPlotas(trikPag, trikAukstis));
+
+            // 10 uzduotis*******************************************************
+
+            //Console.WriteLine("Iveskite apskritimo spinduli");
+            //float spindulys = float.Parse(Console.ReadLine());
+
+            //ApskritimoPlotas(spindulys);
+            //ApskritimoPerimetras(spindulys);
+
+            // 11 uzduotis*******************************************************
+
+            //Console.WriteLine("Iveskite kubo krastines ilgi");
+            //float kuboKrastine = float.Parse(Console.ReadLine());
+
+            //RastiKuboTuri(kuboKrastine);
+
+            // 12 uzduotis**************************************************
+
+            //Console.WriteLine("Iveskite temperatura Celsijaus skaleje");
+            //double celsijus = double.Parse(Console.ReadLine());
+
+            //TurnToFarenheit(celsijus);
+
+
+
         }
 
 
@@ -209,5 +251,40 @@ namespace ManoPrograma
             }
         }
 
+        public static float KvadratoPerimetras(float a)
+        {
+            float perimetras = a * 4;
+            return perimetras;
+        }
+
+        public static float TrikampioPlotas(float a, float b)
+        {
+            float plotas = a / 2 * b;
+            return plotas;
+        }
+
+        public static void ApskritimoPlotas(float a)
+        {
+            double plotas = Math.PI * Math.Pow(2, a);
+            Console.WriteLine("Apskritimo plotas yra: " + Math.Round(plotas,2));
+        }
+
+        public static void ApskritimoPerimetras(float a)
+        {
+            double perimetras = 2 * Math.PI * a;
+            Console.WriteLine("Apskritimo perimetras yra: " + Math.Round(perimetras, 2));
+        }
+
+        public static void RastiKuboTuri(float a)
+        {
+            double turis = Math.Pow(3, a);
+            Console.WriteLine("Kubo turis yra: " + Math.Round(turis, 2));
+        }
+
+        public static void TurnToFarenheit(double a)
+        {
+            double farenheit = a * 1.8 + 32;
+            Console.WriteLine("Temperatura Farenheito skaleje: " + Math.Round(farenheit,1));
+        }
     }
 }
